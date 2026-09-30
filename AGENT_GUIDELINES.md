@@ -6,7 +6,7 @@
 
 ## Testing
 
-- Unit tests are optional, but if you write them, write them before development begins — never after.
+- Unit tests, if written, must be written exclusively before development begins, not after.
 - After development, all testing must be functional tests. Unit tests are allowed at this stage only for edge cases and malformed-input handling.
 
 ## CI/CD
