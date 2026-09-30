@@ -15,6 +15,7 @@
 
 - For anything beyond a small change, write a short plan: steps, files touched, and how you'll verify it.
 - Break large tasks into small, independently verifiable steps.
+- Before writing any code, split the software into modular components, each in its own directory or subdirectory with a clear responsibility and interface.
 - Prefer the simplest solution that fully solves the problem. Don't add features, abstractions, or dependencies that weren't asked for.
 
 ## 3. Write code like the codebase
@@ -28,7 +29,8 @@
 ## 4. Verify everything
 
 - Run the build, linter, type checker, and tests relevant to your change before calling it done.
-- Add or update tests for new behavior and bug fixes.
+- **Unit tests come first.** Write unit tests before development begins, as the spec for each component.
+- **After development, test functionally.** All post-development testing must be functional (end-to-end or integration) tests. New unit tests at this stage are allowed only for edge cases and malformed-input handling.
 - For UI changes, actually run the app and look at the result.
 - If you can't verify something, say so explicitly — never claim it works without evidence.
 
@@ -46,6 +48,9 @@
 - Never force-push, rewrite shared history, or delete branches without explicit approval.
 - Don't commit generated files, build artifacts, `.env` files, or secrets. Keep `.gitignore` up to date.
 - Open PRs with a clear description: what, why, how it was tested.
+- Every repo must have CI/CD running on pull requests, including linting.
+- PRs that fail any mandatory test suite must be blocked from merging.
+- Branch protection must be active on `main`: no direct pushes, required status checks, and PR review before merge.
 
 ## 7. Safety and permissions
 
