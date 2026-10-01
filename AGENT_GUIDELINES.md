@@ -20,3 +20,8 @@
 - Every commit message must start with one of `feat:`, `fix:`, `docs:`, `style:`, `test:`, `chore:`, or `revert:`, chosen according to the [Conventional Commits](https://www.conventionalcommits.org/) standard.
 - Every PR must include a change log with three parts: **System before**, **Task**, and **System after**.
 - PR descriptions must be concise and bulleted.
+
+## Token Budget
+
+- Track token usage whenever it is available.
+- Once the user's requirements are met, stop iterating. Don't keep spending a large share of the token budget on further improvements.
